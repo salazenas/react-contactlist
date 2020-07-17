@@ -13,18 +13,22 @@ class App extends React.Component {
       contacts: []
     };
   }
-  componentDidMount() {
-    fetch("https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts", {
-      method: "GET",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    })
-      .then((response) => response.json())
-      .then((contacts) => {
-        this.setState({
-          contacts
-        });
-      });
-  }
+
+  /**
+   * REST API unavailable
+   */
+  // componentDidMount() {
+  //   fetch("https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts", {
+  //     method: "GET",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((contacts) => {
+  //       this.setState({
+  //         contacts
+  //       });
+  //     });
+  // }
 
   render() {
     return (
