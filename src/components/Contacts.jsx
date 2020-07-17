@@ -10,9 +10,9 @@ class Contacts extends React.Component {
         <span className="contact__data">Nome</span>
         <span className="contact__data">Telefone</span>
         <span className="contact__data">País</span>
-        <span className="contact__data">Admissão</span>
         <span className="contact__data">Empresa</span>
         <span className="contact__data">Departamento</span>
+        <span className="contact__data">Admissão</span>
       </div>
     );
   }
@@ -23,7 +23,7 @@ class Contacts extends React.Component {
         <section className="contacts">
           {this.getHeaders()}
           {this.props.contacts.map(({ id, ...data }) => (
-            <Contact {...data} key={id} />
+            <Contact key={id} data={data} />
           ))}
         </section>
       </div>
